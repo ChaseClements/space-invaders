@@ -1,4 +1,5 @@
 import pygame
+import os
 from Missile import Missile
 
 
@@ -6,7 +7,8 @@ from Missile import Missile
 # This class creates the spaceship object that the user plays as
 class Player:
     def __init__(self):                                     # The constructor
-        self.image = pygame.image.load("spaceship.png")     # Load the player's image
+        self.image = pygame.image.load(os.path.join(        # Load the player's image
+            "image_assets", "spaceship.png"))               #
         self.missile = Missile()                            # Create a missile object
         self.x_pos = 370                                    # Initialize the x position to 370
         self.y_pos = 480                                    # Initialize the y position to 480
